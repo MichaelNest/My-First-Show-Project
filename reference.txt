@@ -1,0 +1,15 @@
+1) Create git repository; add LICENSE (Apach 2.0); add .gitignore for Python
+2) Come in my projects folder and: 
+	git clone 'copy address my repository'
+3) If my computer system does not have pipenv - install:
+	sudo apt install pipenv
+4) go to project-folder and create virtual environment there with python 3.8.*:
+	pipenv --python 3.8 
+5) pipenv --venv --- looking at adress directory with venv
+6) pipenv install django==3.0.9
+7) pipenv install --- install at all from Pipfile-file (if it needs)
+8) pipenv install --dev black==20.8b1 --- install application for format code
+9) pipenv run django-admin startproject core
+10) mv core src --- rename exterman folder from 'core' to 'src'
+11) git status; git add --all; git status; git commit -m 'commit text'; git push origin master
+12) heroku git:remote -a my-first-show-project --- register git-repository with heroku-repository
