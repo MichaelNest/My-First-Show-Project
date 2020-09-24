@@ -15,4 +15,5 @@
 12) heroku git:remote -a my-first-show-project --- register git-repository with heroku-repository
 13) heroku-project/settings/config_vars/DISABLE_COLLECTSTATIC=1 --- disabled staticfiles
 14) Create file Procfile, add string: web: pipenv run python src/manage.py runserver 0.0.0.0:$PORT
-15)
+15) heroku logs --tail --- show logs
+16)
