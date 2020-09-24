@@ -1,1 +1,1 @@
-web: pipenv run python src/manage.py runserver my-first-show-project.herokuapp.com:$PORT
+web: pipenv run python src/manage.py runserver 0.0.0.0:$PORT
