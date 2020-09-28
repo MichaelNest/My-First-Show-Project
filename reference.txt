@@ -15,5 +15,14 @@
 12) heroku git:remote -a my-first-show-project --- register git-repository with heroku-repository
 13) heroku-project/settings/config_vars/DISABLE_COLLECTSTATIC=1 --- disabled staticfiles
 14) Create file Procfile, add string: web: pipenv run python src/manage.py runserver 0.0.0.0:$PORT
-15) heroku logs --tail --- show logs
-16)
+15) Add hosts to ALLOWED_HOSTS
+16) heroku logs --tail --- show logs
+17) !!! heroku server get started, when remove words 'pipenv run' in Procfile
+-----------------------------------------------------------------------------------------------------------------
+18) Create app for users:
+    ('pipenv run' or 'pipenv shell' ) python manage.py startapp users
+19) Add to settings.py field AUTH_USER_MODEL = 'users.CustomUser'
+20) Add to users/models.py class CustomUser
+21) Create file users/forms.py and add classes CustomUserCreationForm and CustomUserChangeForm
+22) Setting file users/admin.py
+23) Create makemigrations and migrate
