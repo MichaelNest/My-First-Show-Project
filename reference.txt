@@ -22,7 +22,17 @@
 18) Create app for users:
     ('pipenv run' or 'pipenv shell' ) python manage.py startapp users
 19) Add to settings.py field AUTH_USER_MODEL = 'users.CustomUser'
-20) Add to users/models.py class CustomUser
+20) Add to users/models.py class CustomUser(AbstractUser)
 21) Create file users/forms.py and add classes CustomUserCreationForm and CustomUserChangeForm
 22) Setting file users/admin.py
 23) Create makemigrations and migrate
+24) Create Superuser
+25) Create folder 'templates/registration'
+26) Add to settings.py fields LOGIT_REDIRECT_URL and LOGOUT_REDIRECT_URL
+26) Create files base.html, home.html, signup.html and registration/login.html
+------------------------------------------------------------------------------------------------------------------
+27) Setting file core/urls.py
+28) Create and setting file users/urls.py
+29) Setting file users/views.py, create class Signup(CreateView)
+30) Change field 'fields' in file users/forms.py - add to form 'email'-field
+
