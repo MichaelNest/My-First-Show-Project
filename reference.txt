@@ -35,4 +35,7 @@
 28) Create and setting file users/urls.py
 29) Setting file users/views.py, create class Signup(CreateView)
 30) Change field 'fields' in file users/forms.py - add to form 'email'-field
-
+------------------------------------------------------------------------------------------------------------------
+31) Create app Pages for static-pages
+32) Change core/urls.py (include('pages.urls')); Create file pages/urls.py; Create class HomePageView() in pages/views.py.
+33)
