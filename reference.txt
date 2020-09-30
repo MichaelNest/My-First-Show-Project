@@ -37,5 +37,10 @@
 30) Change field 'fields' in file users/forms.py - add to form 'email'-field
 ------------------------------------------------------------------------------------------------------------------
 31) Create app Pages for static-pages
-32) Change core/urls.py (include('pages.urls')); Create file pages/urls.py; Create class HomePageView() in pages/views.py.
-33)
+32) Change core/urls.py (include('pages.urls')); Create file pages/urls.py;
+Create class HomePageView() in pages/views.py.
+------------------------------------------------------------------------------------------------------------------
+33) Change file base.html - add Bootstrap,
+34) In file settings.py add STATICFILES_DIRS
+35) Create directory 'static/css', create file base.css, add base.css to base.html
+------------------------------------------------------------------------------------------------------------------

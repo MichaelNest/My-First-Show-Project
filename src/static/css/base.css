@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Raleway&display=swap');
+
+body {
+    background-color: #f2f2f2;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway";
+    font-weight: 300;
+    color: #333;
+}
+
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+br {
+    display: 0;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+
+a:hover, a:focus {
+    color: #f85c37;
+    text-decoration: none;
+    outline: 0;
+}
+
+.navbar {
+    font-weight: 800;
+    font-size: 22px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar-brand {
+    font-weight: bolder;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+#headwrap{
+    background: url(../img/bg.jpg) no-repeat center center;
+    margin-top: -23px;
+    padding-top: 20px;
+    text-align: center;
+    background-attachment: relative;
+    background-position: center center;
+    /*min-height: 500px;*/
+    min-height: 300px;
+    width: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headwrap h1{
+    /*min-height: 100px;*/
+    margin-top: 15px;
+    color: white;
+    font-size: 70px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+#headwrap h2{
+    color: white;
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+footer{
+    background-color: #3f3f3f;
+    padding-top: 20px;
+    border-top: 4px solid silver;
+    color: white;
+}
+
+footer h2{
+    color: white;
+}
+/*
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    border-bottom: 1px solid
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+header h1 a {
+    color: red;
+    text-decoration: none;
+}
+
+.nav-left {
+    margin-right: auto;
+}
+
+.nav-right {
+    display: flex;
+    padding-top: 2rem;
+}
+
+.post-entry {
+    margin-bottom: 2rem;
+}
+
+.post-entry h2 {
+    margin: 0.5rem 0;
+}
+
+.post-entry h2 a,
+.post-entry h2 a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
+.post-entry p {
+    margin: 0;
+    font-weight: 400;
+}
+
+.post-entry h2 a:hover {
+    color: red;
+}
+*/
