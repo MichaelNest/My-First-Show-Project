@@ -51,3 +51,6 @@ Create class HomePageView() in pages/views.py.
 39) Add to settings.py to INSTALLED_APPS=[..., 'crispy_forms',...] and CRISPY_TEMPLATE_PACK = 'bootstrap4'
 40) Add to users/signup.html {% load crispy_forms_tags %} and {{ form|crispy }} instead of {{ form.as_p }}
 ------------------------------------------------------------------------------------------------------------------
+41) Create files registration/password_change_form.html and registration/password_change_done.html
+42) Add form password_change to password_change.html and successfull-text to password_change_done.html
+------------------------------------------------------------------------------------------------------------------
