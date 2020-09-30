@@ -54,3 +54,6 @@ Create class HomePageView() in pages/views.py.
 41) Create files registration/password_change_form.html and registration/password_change_done.html
 42) Add form password_change to password_change.html and successfull-text to password_change_done.html
 ------------------------------------------------------------------------------------------------------------------
+43) Create and setting files registration/password_reset_form.html, password_reset_donem.html,
+password_reset_confirm.html, password_reset_complate.html
+------------------------------------------------------------------------------------------------------------------
