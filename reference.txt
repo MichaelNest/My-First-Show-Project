@@ -47,3 +47,7 @@ Create class HomePageView() in pages/views.py.
 36) Create directory 'templates/includes', create file includes/navbar.html
 37) Include navbar.html to base.html
 ------------------------------------------------------------------------------------------------------------------
+38) Install library Crispy: pipenv install django-crispy-forms
+39) Add to settings.py to INSTALLED_APPS=[..., 'crispy_forms',...] and CRISPY_TEMPLATE_PACK = 'bootstrap4'
+40) Add to users/signup.html {% load crispy_forms_tags %} and {{ form|crispy }} instead of {{ form.as_p }}
+------------------------------------------------------------------------------------------------------------------
