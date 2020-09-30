@@ -44,3 +44,6 @@ Create class HomePageView() in pages/views.py.
 34) In file settings.py add STATICFILES_DIRS
 35) Create directory 'static/css', create file base.css, add base.css to base.html
 ------------------------------------------------------------------------------------------------------------------
+36) Create directory 'templates/includes', create file includes/navbar.html
+37) Include navbar.html to base.html
+------------------------------------------------------------------------------------------------------------------
