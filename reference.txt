@@ -74,4 +74,8 @@ password_reset_confirm.html, password_reset_complate.html
 55) Create class ArticleListView(ListView) in file article/views.py
 56) Create and set file templates/articles/article_list.html
 ------------------------------------------------------------------------------------------------------------------
-57)
+57) Set file articles/urls.py for detail, update, delete
+58) Create classes ArticleDetailView, ArticleUpdateView and ArticleDeleteView in file articles/views.py
+59) Create article_detail.html, article_edit.html and article_delete.html
+------------------------------------------------------------------------------------------------------------------
+60)
