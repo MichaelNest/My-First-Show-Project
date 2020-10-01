@@ -68,3 +68,10 @@ password_reset_confirm.html, password_reset_complate.html
 51) Create class Article in file articles/models.py and make migrations
 ------------------------------------------------------------------------------------------------------------------
 52) Set file articles/admin.py.
+------------------------------------------------------------------------------------------------------------------
+53) Make include-record to core/urls.py
+54) Create file articles/urls.py
+55) Create class ArticleListView(ListView) in file article/views.py
+56) Create and set file templates/articles/article_list.html
+------------------------------------------------------------------------------------------------------------------
+57)
