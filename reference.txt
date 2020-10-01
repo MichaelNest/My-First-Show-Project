@@ -57,3 +57,9 @@ Create class HomePageView() in pages/views.py.
 43) Create and setting files registration/password_reset_form.html, password_reset_donem.html,
 password_reset_confirm.html, password_reset_complate.html
 ------------------------------------------------------------------------------------------------------------------
+44) Install library python-dotenv: pipenv install python-dotenv
+45) Create file .env, add to it fields EMAIL_HOST_USER and EMAIL_HOST_PASSWORD
+46) Import to settings.py 'from dotenv import load_dotenv' and override EMAIL_HOST_USER and EMAIL_HOST_PASSWORD
+47) 0pen access for application in settings gmail-account
+------------------------------------------------------------------------------------------------------------------
+48)
