@@ -63,3 +63,6 @@ password_reset_confirm.html, password_reset_complate.html
 47) 0pen access for application in settings gmail-account
 48) Create file templates/registration/password_reset_email.html and password_reset_subject.txt for change text of letter
 ------------------------------------------------------------------------------------------------------------------
+49) Create application Articles
+50) Add settings to settings.py
+51) Create class Article in file articles/models.py and make migrations

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     #local
     'users',
     'pages',
+    'articles',
 ]
 
 MIDDLEWARE = [
@@ -117,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
 
@@ -133,6 +134,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
 LOGIN_REDIRECT_URL = 'pages:home'
 LOGOUT_REDIRECT_URL = 'pages:home'
 
