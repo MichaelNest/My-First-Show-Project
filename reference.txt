@@ -66,3 +66,5 @@ password_reset_confirm.html, password_reset_complate.html
 49) Create application Articles
 50) Add settings to settings.py
 51) Create class Article in file articles/models.py and make migrations
+------------------------------------------------------------------------------------------------------------------
+52) Set file articles/admin.py.
