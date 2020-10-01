@@ -61,5 +61,5 @@ password_reset_confirm.html, password_reset_complate.html
 45) Create file .env, add to it fields EMAIL_HOST_USER and EMAIL_HOST_PASSWORD
 46) Import to settings.py 'from dotenv import load_dotenv' and override EMAIL_HOST_USER and EMAIL_HOST_PASSWORD
 47) 0pen access for application in settings gmail-account
+48) Create file templates/registration/password_reset_email.html and password_reset_subject.txt for change text of letter
 ------------------------------------------------------------------------------------------------------------------
-48)

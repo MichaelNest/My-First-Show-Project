@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-from .constantes import EMAIL_PASSW, EMAIL_LOGIN
 import os
 from dotenv import load_dotenv
 load_dotenv()
