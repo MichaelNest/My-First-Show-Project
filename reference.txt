@@ -78,4 +78,11 @@ password_reset_confirm.html, password_reset_complate.html
 58) Create classes ArticleDetailView, ArticleUpdateView and ArticleDeleteView in file articles/views.py
 59) Create article_detail.html, article_edit.html and article_delete.html
 ------------------------------------------------------------------------------------------------------------------
-60)
+60) Create url, view and template article_new.html for create new articles
+------------------------------------------------------------------------------------------------------------------
+61) Set article/views.py class ArticleCreateView() - add def form_valid and remove 'author' - by create new article
+- author will add automaticly.
+62) Import to articles/views.py class python.contrib.auth.moxins - LoginRequiredMixin, ass it to class ArticleCreateView,
+and add field login_url='login'. - creating articles can only autentificate user - go to login-page.
+63) Add LoginRequiredMixin and login_url to other classes articles/views.py
+------------------------------------------------------------------------------------------------------------------
