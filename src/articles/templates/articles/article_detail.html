@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block title %}Detail{% endblock title %}
+
+{% block content %}
+<div class="container padding">
+<div class="col-md-12 col-md-offset-2">
+    <div class="card" >
+
+        <div class="card-body">
+    <div class="post-entry">
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.body }}</p>
+        <p>Автор: {{ article.author }} | {{ article.create_date|date:'d-m-Y' }}</p>
+
+    {% if user.is_authenticated %}
+        <p><a href="{% url 'articles:article_edit' article.pk %}"> Edit  </a> | <a href="{% url 'articles:article_delete' article.pk %}"> Delete</a></p>
+        <p><a href="{% url 'articles:article_list' %}" role="button" class="btn btn-primary">To Article List</a></p>
+
+    {% else %}
+        <h5>Please login for <a href="{% url 'login' %}">Edit article</a></h5>
+    {% endif %}
+        </div>
+    </div>
+</div>
+</div>
+</div>
+{% endblock content %}
