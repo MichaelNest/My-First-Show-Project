@@ -14,3 +14,14 @@ class Article(models.Model):
 
     def get_absolute_url(self):
         return reverse('articles:article_detail', args=[str(self.id)])
+
+class Comment(models.Model):
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    comment = models.CharField(max_length=555)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
+    def __ste__(self):
+        return self.comment
+
+    def get_absolute_url(self):
+        return reverse('articles:article_list')

@@ -14,13 +14,12 @@
         <p>{{ article.body }}</p>
         <p>Автор: {{ article.author }} | {{ article.create_date|date:'d-m-Y' }}</p>
 
-    {% if user.is_authenticated %}
-        <p><a href="{% url 'articles:article_edit' article.pk %}"> Edit  </a> | <a href="{% url 'articles:article_delete' article.pk %}"> Delete</a></p>
-        <p><a href="{% url 'articles:article_list' %}" role="button" class="btn btn-primary">To Article List</a></p>
+    {% if user.is_authenticated and article.author == request.user %}
+        <p><a href="{% url 'articles:article_edit' article.pk %}"> Edit  </a>|<a href="{% url 'articles:article_delete' article.pk %}">  Delete</a></p>
 
-    {% else %}
-        <h5>Please login for <a href="{% url 'login' %}">Edit article</a></h5>
+<!--        <h5>Only author can Edit this Article. Please <a href="{% url 'login' %}">Login</a> as author.</h5>-->
     {% endif %}
+        <p><a href="{% url 'articles:article_list' %}" role="button" class="btn btn-primary">To Article List</a></p>
         </div>
     </div>
 </div>

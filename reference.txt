@@ -82,7 +82,10 @@ password_reset_confirm.html, password_reset_complate.html
 ------------------------------------------------------------------------------------------------------------------
 61) Set article/views.py class ArticleCreateView() - add def form_valid and remove 'author' - by create new article
 - author will add automaticly.
-62) Import to articles/views.py class python.contrib.auth.moxins - LoginRequiredMixin, ass it to class ArticleCreateView,
-and add field login_url='login'. - creating articles can only autentificate user - go to login-page.
+62) Import to articles/views.py class python.contrib.auth.mixins - LoginRequiredMixin, ass it to class ArticleCreateView,
+and add field login_url='login'. - create articles can only autentificate user - go to login-page.
 63) Add LoginRequiredMixin and login_url to other classes articles/views.py
+------------------------------------------------------------------------------------------------------------------
+64) Create model Comment in file articles/models.py
+65) Create makemigrations articles/migrate
 ------------------------------------------------------------------------------------------------------------------

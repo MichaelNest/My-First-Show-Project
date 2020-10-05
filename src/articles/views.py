@@ -4,10 +4,10 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from .models import Article
 
-class ArticleListView(LoginRequiredMixin, ListView):
+class ArticleListView(ListView):
     model = Article
     template_name = 'articles/article_list.html'
-    login_url = 'login'
+    # login_url = 'login'
 
 class ArticleDetailView(LoginRequiredMixin, DetailView):
     model = Article
