@@ -91,3 +91,5 @@ and add field login_url='login'. - create articles can only autentificate user -
 ------------------------------------------------------------------------------------------------------------------
 66) Set file articles/admin.py for show comments in adminpanel (admin.StackedInLine and admin.TabularInLine)
 ------------------------------------------------------------------------------------------------------------------
+67) Add to articles/models.py/Comment/article - related_name='comments'
+------------------------------------------------------------------------------------------------------------------
