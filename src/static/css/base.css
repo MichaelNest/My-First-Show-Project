@@ -62,7 +62,7 @@ a:hover, a:focus {
 }
 
 #headwrap{
-    background: url(../img/bg.jpg) no-repeat center center;
+    background: url(../img/wallpaper_11_4.png) no-repeat center center;
     margin-top: -23px;
     padding-top: 20px;
     text-align: center;
@@ -83,7 +83,7 @@ a:hover, a:focus {
     margin-top: 15px;
     color: white;
     font-size: 70px;
-    font-weight: 300;
+    font-weight: 600;
     letter-spacing: 3px;
 }
 
