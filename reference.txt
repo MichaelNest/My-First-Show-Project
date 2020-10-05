@@ -89,3 +89,5 @@ and add field login_url='login'. - create articles can only autentificate user -
 64) Create model Comment in file articles/models.py
 65) Create makemigrations articles/migrate
 ------------------------------------------------------------------------------------------------------------------
+66) Set file articles/admin.py for show comments in adminpanel (admin.StackedInLine and admin.TabularInLine)
+------------------------------------------------------------------------------------------------------------------
