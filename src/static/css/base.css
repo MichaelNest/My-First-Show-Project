@@ -104,6 +104,10 @@ footer{
 footer h2{
     color: white;
 }
+
+footer h5{
+    color: white;
+}
 /*
 body {
     font-family: 'Source Sans Pro', sans-serif;
