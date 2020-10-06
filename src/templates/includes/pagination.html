@@ -1,0 +1,30 @@
+<nav aria-label="...">
+  <ul class="pagination">
+      {% if page.number != 1 %}
+      <li class="page-item"><a class="page-link" href="?page=1">На первую</a></li>
+      {% endif %}
+      {% if page.has_previous %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{page.previous_page_number}}">Предыдущая</a>
+    </li>
+      {% endif %}
+      <!--        {% for n in page.paginator.page_range %}-->
+<!--      <li class="page-item {% if page.number == n %} active {% endif %}"><a class="page-link" href="?page={{ n }}">{{ n }}</a></li>-->
+<!--        {% endfor %}-->
+      {% for n in page.paginator.page_range %}
+      {% if page.number == n %}
+        <li class="page-item active "><a class="page-link" href="?page={{ n }}">{{ n }}</a></li>
+      {% elif n > page.number|add:-3 and n < page.number|add:3 %}
+        <li class="page-item"><a class="page-link" href="?page={{ n }}">{{ n }}</a></li>
+      {% endif %}
+      {% endfor %}
+        <li class="page-item"><a class="page-link" >из</a></li>
+        <li class="page-item"><a class="page-link" href="?page={{ page.paginator.num_pages }}">{{page.paginator.num_pages }}</a></li>
+
+      {% if page.has_next %}
+      <li class="page-item">
+      <a class="page-link" href="?page={{ page.next_page_number }}">Следующая</a>
+      </li>
+      {% endif %}
+  </ul>
+</nav>

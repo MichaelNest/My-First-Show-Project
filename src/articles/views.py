@@ -7,6 +7,7 @@ from .models import Article
 class ArticleListView(ListView):
     model = Article
     template_name = 'articles/article_list.html'
+    paginate_by = 2
     # login_url = 'login'
 
 class ArticleDetailView(LoginRequiredMixin, DetailView):
