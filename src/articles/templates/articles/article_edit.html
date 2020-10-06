@@ -5,7 +5,7 @@
 
 
 {% block content %}
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}
         <input type="submit" class="btn btn-info ml-2" value="Update">

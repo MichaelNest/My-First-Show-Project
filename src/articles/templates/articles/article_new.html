@@ -6,7 +6,7 @@
 
 {% block content %}
     <h1>Create New Article</h1>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" class="btn btn-success ml-2" value="Save">

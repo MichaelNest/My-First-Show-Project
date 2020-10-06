@@ -95,3 +95,5 @@ and add field login_url='login'. - create articles can only autentificate user -
 ------------------------------------------------------------------------------------------------------------------
 68) Change templates article_list.html and article_detail.html for show comments count and comments
 ------------------------------------------------------------------------------------------------------------------
+69) Create operation-set for showing MEDIA-files
+------------------------------------------------------------------------------------------------------------------

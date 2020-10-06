@@ -16,7 +16,7 @@ class ArticleDetailView(LoginRequiredMixin, DetailView):
 
 class ArticleUpdateView(LoginRequiredMixin, UpdateView):
     model = Article
-    fields = ['title', 'body']
+    fields = ['title', 'body', 'image']
     template_name = 'articles/article_edit.html'
     login_url = 'login'
 
@@ -28,7 +28,7 @@ class ArticleDeleteView(LoginRequiredMixin, DeleteView):
 
 class ArticleCreateView(LoginRequiredMixin, CreateView):
     model = Article
-    fields = ['title', 'body']
+    fields = ['title', 'body', 'image']
     template_name = 'articles/article_new.html'
     login_url = 'login'
 

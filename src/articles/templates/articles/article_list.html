@@ -22,7 +22,12 @@
                         <p>{{ article.body|truncatewords:22|safe }}...</p>
                         <p>Author: {{ article.author }} | {{ article.create_date|date:'d-m-Y' }}</p>
                     </div>
-                </div>
+                    <div class="col-4">
+                        {% if article.image %}
+                        <p><a href="{% url 'articles:article_detail' article.pk %}"><img src="{{ article.image.url }}" style="max-width:200px; max-height:200px;" alt=""></a></p>
+                        {% endif %}
+                    </div>
+                </div>'
             </div>
 
 <!--        </div>-->
