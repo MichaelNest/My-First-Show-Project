@@ -20,9 +20,11 @@ class Comment(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='comments')
     comment = models.CharField(max_length=555)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    create_date = models.DateTimeField(auto_now_add=True, null=True)
+    moderat = models.BooleanField(default=True)
 
     def __ste__(self):
-        return self.comment
+        return f'{self.author} - {self.create_date}'
 
     def get_absolute_url(self):
-        return reverse('articles:article_list')
+        return reverse('articles:article_detail', args=[str(self.id)])

@@ -30,10 +30,25 @@
     </div>
         <div class="card-footer">
             <h5>Comments: </h5>
-            {% for comment in article.comments.all %}
+            {% for comment in comments %}
             <p><span class="font-weight-bold">{{ comment.author }} -  </span> {{ comment.comment }}</p>
             {% endfor %}
         </div>
+        <div class="col-md-12 col-md-offset-2">
+            <div class="card">
+                <div class="text-center my-2">
+                    <h5>Create comment:</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" class="btn btn-success ml-2" value="Save">
+                    </form>
+                </div>
+            </div>
+        </div>
+
 </div>
 </div>
 </div>
