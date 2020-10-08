@@ -10,7 +10,7 @@
     <div class="card" >
         <div class="text-center">
             {% if article.image %}
-                <p><img src="{{ article.image.url }}"  class="card-img-fluid" alt="..."></p>
+                <p><img src="{{ article.image.url }}"  class="card-img-top" alt="..."></p>
             {% endif %}
         </div>
 
@@ -29,12 +29,20 @@
         </div>
     </div>
         <div class="card-footer">
-            <h5>Comments: </h5>
+            <h5 class="text-center my-2">Comments: </h5>
             {% for comment in comments %}
-            <p><span class="font-weight-bold">{{ comment.author }} -  </span> {{ comment.comment }}</p>
+            <div class="card my-1">
+                <div class="card-title"><span class="font-weight-bold">{{ comment.author }}:  </span></div>
+                <div class="container"><div class="card-body"><p> {{ comment.comment }}</p></div></div>
+            </div>
             {% endfor %}
         </div>
-        <div class="col-md-12 col-md-offset-2">
+</div>
+</div>
+</div>
+
+    <div class="container padding my-3">
+    <div class="col-md-12 col-md-offset-2">
             <div class="card">
                 <div class="text-center my-2">
                     <h5>Create comment:</h5>
@@ -48,8 +56,6 @@
                 </div>
             </div>
         </div>
+    </div>
 
-</div>
-</div>
-</div>
 {% endblock content %}

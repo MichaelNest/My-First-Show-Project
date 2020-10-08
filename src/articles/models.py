@@ -18,7 +18,7 @@ class Article(models.Model):
 
 class Comment(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='comments')
-    comment = models.CharField(max_length=555)
+    comment = models.TextField()
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     create_date = models.DateTimeField(auto_now_add=True, null=True)
     moderat = models.BooleanField(default=True)
