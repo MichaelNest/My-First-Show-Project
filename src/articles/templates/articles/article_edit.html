@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 
 
-{% block title %}Edit{% endblock title %}
+{% block title %}Edit Article{% endblock title %}
 
 
 {% block content %}
+    <h1> Редактировать статью:</h1>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}
-        <input type="submit" class="btn btn-info ml-2" value="Update">
+        <input type="submit" class="btn btn-info ml-2" value="Сохранить">
     </form>
 {% endblock content %}

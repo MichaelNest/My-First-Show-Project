@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
 
-{% block title %}Detail{% endblock title %}
+{% block title %}Detail Article{% endblock title %}
 
 
 {% block content %}
 <div class="container padding">
 <div class="col-md-12 col-md-offset-2">
-    <div class="card" >
+    <div class="card border-info mb-3" >
         <div class="text-center">
             {% if article.image %}
                 <p><img src="{{ article.image.url }}"  class="card-img-top" alt="..."></p>
@@ -16,24 +16,25 @@
 
         <div class="card-body">
     <div class="post-entry">
-        <h2>{{ article.title }}</h2>
+        <p><h2>{{ article.title }}</h2></p>
         <p>{{ article.body }}</p>
         <p>Автор: {{ article.author }} | {{ article.create_date|date:'d-m-Y' }}</p>
-
+    <div class="text-center">
     {% if user.is_authenticated and article.author == request.user %}
-        <p><a href="{% url 'articles:article_edit' article.pk %}"> Edit  </a>|<a href="{% url 'articles:article_delete' article.pk %}">  Delete</a></p>
+        <a href="{% url 'articles:article_edit' article.pk %}"> Edit  </a>|<a href="{% url 'articles:article_delete' article.pk %}">  Delete</a>
 
 <!--        <h5>Only author can Edit this Article. Please <a href="{% url 'login' %}">Login</a> as author.</h5>-->
     {% endif %}
-        <p><a href="{% url 'articles:article_list' %}" role="button" class="btn btn-primary">To Article List</a></p>
+        <a href="{% url 'articles:article_list' %}" role="button" class="btn btn-primary mx-3">Перейти к списку статей</a>
         </div>
     </div>
-        <div class="card-footer">
-            <h5 class="text-center my-2">Comments: </h5>
+    </div>
+        <div class="card-footer ">
+            <h4 class="my-2">Комментарии: </h4>
             {% for comment in comments %}
-            <div class="card my-1">
-                <div class="card-title"><span class="font-weight-bold">{{ comment.author }}:  </span></div>
-                <div class="container"><div class="card-body"><p> {{ comment.comment }}</p></div></div>
+            <div class="card border-success mb-3 my-1">
+                <div class="card-title text-white bg-secondary "><span class="font-weight-bold">{{ comment.author }}:  </span></div>
+                <div class="card-body">{{ comment.comment }}</div>
             </div>
             {% endfor %}
         </div>
@@ -43,15 +44,15 @@
 
     <div class="container padding my-3">
     <div class="col-md-12 col-md-offset-2">
-            <div class="card">
-                <div class="text-center my-2">
-                    <h5>Create comment:</h5>
+            <div class="card border-warning mb-3">
+                <div class="container my-2">
+                    <h4>Написать комментарий:</h4>
                 </div>
                 <div class="card-body">
                     <form method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <input type="submit" class="btn btn-success ml-2" value="Save">
+                        <input type="submit" class="btn btn-success ml-2" value="Отправить">
                     </form>
                 </div>
             </div>

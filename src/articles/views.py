@@ -8,7 +8,7 @@ from .forms import CommentForm
 class ArticleListView(ListView):
     model = Article
     template_name = 'articles/article_list.html'
-    paginate_by = 2
+    paginate_by = 3
     # login_url = 'login'
 
 class ArticleDetailView(LoginRequiredMixin, FormMixin, DetailView):
