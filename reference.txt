@@ -107,3 +107,12 @@ and add field login_url='login'. - create articles can only autentificate user -
 ------------------------------------------------------------------------------------------------------------------
 75) Edit front-view, add logo, add icon, edit parameters of comment-form
 ------------------------------------------------------------------------------------------------------------------
+76) Install Dinaconf: pipenv install dynaconf[yaml]; create .env, config;
+create config/settings.yaml and config/.secrets.yaml; add fields to config/settings.yaml; add fields to config/.secrets.yaml;
+77) Command 'dynaconf list' - show my dynaconf-settings 'development'
+78) ENV_FOR_DYNACONF=default (development); dynaconf list --- show my dynaconf-settings 'default'('development')
+79) For change any field - should use prefix MYSITE (from file .env/ENVVAR_PREFIX_FOR_DYNACONF=MYSITE)
+    --- MYSITE_DATABASE_URL=1234567890
+80) Turn off .env in file .gitignore, add to git files .env and config/settings.yaml, add to .gitignore (**/secrets.*) file secrets.yaml
+81) Add to heroku/settings/config_var: MYSITE_SECRET_KEY='....', ENV_FOR_DYNACONF = heroku, and secret vars for post_server
+------------------------------------------------------------------------------------------------------------------

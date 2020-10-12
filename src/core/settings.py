@@ -10,12 +10,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 import os
-from dotenv import load_dotenv
-load_dotenv()
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-EMAIL_HOST = os.getenv('EMAIL_HOST')
-EMAIL_PORT = os.getenv('EMAIL_PORT')
+from dynaconf import settings as _settings
+# from dotenv import load_dotenv
+# load_dotenv()
+# EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+# EMAIL_HOST = os.getenv('EMAIL_HOST')
+# EMAIL_PORT = os.getenv('EMAIL_PORT')
+EMAIL_HOST_USER = _settings.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = _settings.EMAIL_HOST_PASSWORD
+EMAIL_HOST = _settings.EMAIL_HOST
+EMAIL_PORT = _settings.EMAIL_PORT
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,12 +30,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '1)bw4z!++p0vyeh)=+l374j*ke%#-r+q7ey57gut#e#5ulyns%'
+SECRET_KEY = _settings.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = _settings.DEBUG
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'my-first-show-project.herokuapp.com']
+ALLOWED_HOSTS = _settings.ALLOWED_HOSTS
 
 
 # Application definition
@@ -81,6 +86,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'core.wsgi.application'
+
+db_url = _settings.DATABASE_URL
+if _settings.DATABASE_URL == 'heroku':
+    db_url = os.getenv('DATABASE_URL')
 
 
 # Database

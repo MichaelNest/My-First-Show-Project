@@ -1,0 +1,27 @@
+default:
+  SECRET_KEY: ""
+  DEBUG: true
+  ALLOWED_HOSTS: []
+  DATABASE_URL: ""
+  EMAIL_HOST_USER: ""
+  EMAIL_HOST_PASSWORD: ""
+  EMAIL_HOST: ""
+  EMAIL_PORT: ""
+
+
+development:
+  DEBUG: true
+  ALLOWED_HOSTS:
+    - 127.0.0.1
+    - localhost
+
+heroku:
+  DEBUG: false
+  ALLOWED_HOSTS:
+    - 127.0.0.1
+    - localhost
+    - my-first-show-project.herokuapp.com
+
+
+
+

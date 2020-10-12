@@ -25,7 +25,7 @@
 
 <!--        <h5>Only author can Edit this Article. Please <a href="{% url 'login' %}">Login</a> as author.</h5>-->
     {% endif %}
-        <a href="{% url 'articles:article_list' %}" role="button" class="btn btn-primary mx-3">Перейти к списку статей</a>
+        <a href="{% url 'articles:article_list' %}" role="button" class="btn btn-primary mx-3">Список статей</a>
         </div>
     </div>
     </div>
@@ -33,7 +33,7 @@
             <h4 class="my-2">Комментарии: </h4>
             {% for comment in comments %}
             <div class="card border-success mb-3 my-1">
-                <div class="card-title text-white bg-secondary "><span class="font-weight-bold">{{ comment.author }}:  </span></div>
+                <div class="card-title text-white bg-secondary "><span class="font-weight-bold">{{ comment.create_date|date:'d-m-Y' }} | {{ comment.author }}:  </span></div>
                 <div class="card-body">{{ comment.comment }}</div>
             </div>
             {% endfor %}
@@ -43,7 +43,7 @@
 </div>
 
     <div class="container padding my-3">
-    <div class="col-md-12 col-md-offset-2">
+    <div class="col-md-5 col-md-offset-2">
             <div class="card border-warning mb-3">
                 <div class="container my-2">
                     <h4>Написать комментарий:</h4>
