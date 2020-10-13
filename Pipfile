@@ -8,6 +8,8 @@ django = "==3.0.9"
 django-crispy-forms = "*"
 python-dotenv = "*"
 pillow = "*"
+dj-database-url = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 black = "==20.8b1"

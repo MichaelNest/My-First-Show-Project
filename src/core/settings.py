@@ -17,6 +17,8 @@ from dynaconf import settings as _settings
 # EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 # EMAIL_HOST = os.getenv('EMAIL_HOST')
 # EMAIL_PORT = os.getenv('EMAIL_PORT')
+import dj_database_url
+
 EMAIL_HOST_USER = _settings.EMAIL_HOST_USER
 EMAIL_HOST_PASSWORD = _settings.EMAIL_HOST_PASSWORD
 EMAIL_HOST = _settings.EMAIL_HOST
@@ -96,10 +98,11 @@ if _settings.DATABASE_URL == 'heroku':
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
+    'default': dj_database_url.parse(db_url, conn_max_age=600)
 }
 
 

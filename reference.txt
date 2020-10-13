@@ -116,3 +116,16 @@ create config/settings.yaml and config/.secrets.yaml; add fields to config/setti
 80) Turn off .env in file .gitignore, add to git files .env and config/settings.yaml, add to .gitignore (**/secrets.*) file secrets.yaml
 81) Add to heroku/settings/config_var: MYSITE_SECRET_KEY='....', ENV_FOR_DYNACONF = heroku, and secret vars for post_server
 ------------------------------------------------------------------------------------------------------------------
+82) Install PostgresSQL: sudo apt update | sudo apt install postgresql postgresql-contrib
+83) sudo -i -u postgres | sudo -u postgres psql --- enter to postgres | 'exit' - out
+84) psql / psql -d postgres --- bd postgres | \q - out | \l - watch list of bd
+85) sudo -u postgres psql --- create my new database with name 'my_site'
+86) psql -d my_site - enter to my db 'my_site', \d - watch tables in db (\dt)
+87) pipenv install dj-database-url --- install dj-database-url
+88) DATABASES = {'default': dj_database_url.parse(db_url, conn_max_age=600)} - add my_base
+89) Install driver for Django-Postgres --- psycopg2-binary: pipenv install psycopg2-binary
+90) Create password for role 'postgres', command --- \password
+91) Add to secrets.yaml to DATABASE_URL: DATABASE_URL = '"postgresql://name_role:password_role@localhost:5432/my_db_name"'
+92) create user author with login password 'qwerty'; --- create new user(role) with password
+93) create database my_new_db --- create new database
+------------------------------------------------------------------------------------------------------------------
