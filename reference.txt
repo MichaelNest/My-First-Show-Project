@@ -131,5 +131,5 @@ create config/settings.yaml and config/.secrets.yaml; add fields to config/setti
 ------------------------------------------------------------------------------------------------------------------
 94) Install gunicorn
 95) In file Procfile instead of 'web: python src/manage.py runserver 0.0.0.0:$PORT' write 'web: (cd src && gunicorn --workers 2 core.wsgi:app --bind 0.0.0.0:$PORT)'
-96) In file Procfile add 'release: python src/manage.py migrate'
+96) In file Procfile add 'release: python src/manage.py migrate' (web: gunicorn core.wsgi --log-file -)
 ------------------------------------------------------------------------------------------------------------------
