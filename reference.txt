@@ -129,3 +129,7 @@ create config/settings.yaml and config/.secrets.yaml; add fields to config/setti
 92) create user author with login password 'qwerty'; --- create new user(role) with password
 93) create database my_new_db --- create new database
 ------------------------------------------------------------------------------------------------------------------
+94) Install gunicorn
+95) In file Procfile instead of 'web: python src/manage.py runserver 0.0.0.0:$PORT' write 'web: (cd src && gunicorn --workers 2 core.wsgi:app --bind 0.0.0.0:$PORT)'
+96) In file Procfile add 'release: python src/manage.py migrate'
+------------------------------------------------------------------------------------------------------------------
