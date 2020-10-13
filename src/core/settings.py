@@ -98,11 +98,11 @@ if _settings.DATABASE_URL == 'heroku':
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
-    'default': dj_database_url.parse(db_url, conn_max_age=600)
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+    # 'default': dj_database_url.parse(db_url, conn_max_age=600)
 }
 
 
@@ -165,3 +165,6 @@ EMAIL_HOST_USER = EMAIL_HOST_USER
 EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
 EMAIL_PORT = EMAIL_PORT
 EMAIL_USE_TLS = True
+
+db_from_env = dj_database_url.config(db_url, conn_max_age=500)
+DATABASES['default'].update(db_from_env)
