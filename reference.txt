@@ -137,4 +137,5 @@ create config/settings.yaml and config/.secrets.yaml; add fields to config/setti
 99) Add to settings.py var STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' - for compressing staticfiles
 100) (web: gunicorn core.wsgi --log-file -) --- workers recording for file Procfile
 101) Add to ALLOWED_HOSTS = [..., 'whitenoise.runserver_nostatic',...]
+102) Run command 'dynaconf init', creating file src/config.py, change file settings.py
 ------------------------------------------------------------------------------------------------------------------
