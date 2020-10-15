@@ -18,8 +18,6 @@ development:
 heroku:
   DEBUG: false
   ALLOWED_HOSTS:
-    - 127.0.0.1
-    - localhost
     - my-first-show-project.herokuapp.com
 
 
