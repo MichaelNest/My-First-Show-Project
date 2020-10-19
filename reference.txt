@@ -138,4 +138,13 @@ create config/settings.yaml and config/.secrets.yaml; add fields to config/setti
 100) (web: gunicorn core.wsgi --log-file -) --- workers recording for file Procfile
 101) Add to ALLOWED_HOSTS = [..., 'whitenoise.runserver_nostatic',...]
 102) Run command 'dynaconf init', creating file src/config.py, change file settings.py
+103) Work Procfile settings:    'web: ( cd src && gunicorn core.wsgi --bind 0.0.0.0:$PORT )
+                                release: python src/manage.py migrate'
+------------------------------------------------------------------------------------------------------------------
+104) Create Superuser for heroku: heroku run python src/manage.py createsuperuser
+------------------------------------------------------------------------------------------------------------------
+105) Transfer the database: create in app 'articles' directory 'fixtures' for dumps of database
+106) python src/manage.py dumpdata --natural-primary articles > src/articles/fixtures/initial.json --- create dump bd
+107) python src/manage.py loaddata initial.json --- load dump bd from file initial.json to bd-postgres
+108) MYSITE_DATABASE_URL="addres of db from heroku" python src/manage.py loaddata initial.json --- load db from file initial.json to db-heroku
 ------------------------------------------------------------------------------------------------------------------
