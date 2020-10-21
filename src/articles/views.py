@@ -2,6 +2,7 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import DeleteView, UpdateView, CreateView, FormMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
+from django.shortcuts import render
 from .models import Article
 from .forms import CommentForm
 
@@ -11,7 +12,21 @@ class ArticleListView(ListView):
     paginate_by = 3
     # login_url = 'login'
 
-class ArticleDetailView(LoginRequiredMixin, FormMixin, DetailView):
+# class ArticleMyListView(ListView):
+#     model = Article
+#     user = request.user
+#     queryset = Article.objects.filter(author=user)
+#     template_name = 'articles/article_list.html'
+#     paginate_by = 3
+
+def article_my_list(request):
+    object_list = Article.objects.filter(author=request.user)
+    context = {'object_list': object_list}
+    return render(request, 'articles/article_list.html', context)
+
+
+# class ArticleDetailView(LoginRequiredMixin, FormMixin, DetailView):
+class ArticleDetailView(DetailView):
     model = Article
     template_name = 'articles/article_detail.html'
     login_url = 'login'

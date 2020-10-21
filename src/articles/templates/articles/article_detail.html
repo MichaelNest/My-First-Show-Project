@@ -25,7 +25,7 @@
 
 <!--        <h5>Only author can Edit this Article. Please <a href="{% url 'login' %}">Login</a> as author.</h5>-->
     {% endif %}
-        <a href="{% url 'articles:article_list' %}" role="button" class="btn btn-primary mx-3">Список статей</a>
+        <a href="{% url 'articles:article_list' %}" role="button" class="btn btn-primary mx-3">Вернуться к списку статей</a>
         </div>
     </div>
     </div>
@@ -42,6 +42,7 @@
 </div>
 </div>
 
+{% if user.is_authenticated %}
     <div class="container padding my-3">
     <div class="col-md-5 col-md-offset-2">
             <div class="card border-warning mb-3">
@@ -58,5 +59,6 @@
             </div>
         </div>
     </div>
+{% endif %}
 
 {% endblock content %}

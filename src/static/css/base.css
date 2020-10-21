@@ -68,8 +68,8 @@ a:hover, a:focus {
     text-align: center;
     background-attachment: relative;
     background-position: center center;
-    /*min-height: 500px;*/
-    min-height: 300px;
+    min-height: 400px;
+    /*min-height: 300px;*/
     width: 100%;
 
     -webkit-background-size: cover;
