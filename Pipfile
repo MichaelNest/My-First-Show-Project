@@ -12,6 +12,8 @@ dj-database-url = "*"
 psycopg2-binary = "*"
 gunicorn = "*"
 whitenoise = "*"
+boto3 = "*"
+django-storages = "*"
 
 [dev-packages]
 black = "==20.8b1"

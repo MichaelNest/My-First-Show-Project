@@ -26,7 +26,7 @@ def article_my_list(request):
 
 
 # class ArticleDetailView(LoginRequiredMixin, FormMixin, DetailView):
-class ArticleDetailView(DetailView):
+class ArticleDetailView(FormMixin, DetailView):
     model = Article
     template_name = 'articles/article_detail.html'
     login_url = 'login'

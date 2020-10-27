@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8c27e4d787e8908bc75cb92837751417f08ff016f5e2d4b5cb869c2a8a55779e"
+            "sha256": "73718595eaa6ca95ac14049e7c222f35dc766583523f466d3da6ad92dc6dced7"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -22,6 +22,21 @@
                 "sha256:cd88907ecaec59d78e4ac00ea665b03e571cb37e3a0e37b3702af1a9e86c365a"
             ],
             "version": "==3.3.0"
+        },
+        "boto3": {
+            "hashes": [
+                "sha256:abfd82a98fd3399d549dd77575e8933764928f4d7e9c4c24c3efc7e41719d238",
+                "sha256:ebbfbf391ff5deac7b00033dad8e98130db0a0961d76df98ebeb87f785eb0948"
+            ],
+            "index": "pypi",
+            "version": "==1.16.1"
+        },
+        "botocore": {
+            "hashes": [
+                "sha256:325229fcc341b360fa9be114fe204355e13628597c7faae9a4895645e1b455f1",
+                "sha256:873028eb00120fa310226edd584c4cab3eb6ace08b5ad5b8cce1f5f9514e9771"
+            ],
+            "version": "==1.19.1"
         },
         "dj-database-url": {
             "hashes": [
@@ -47,6 +62,14 @@
             "index": "pypi",
             "version": "==1.9.2"
         },
+        "django-storages": {
+            "hashes": [
+                "sha256:12de8fb2605b9b57bfaf54b075280d7cbb3b3ee1ca4bc9b9add147af87fe3a2c",
+                "sha256:652275ab7844538c462b62810276c0244866f345878256a9e0e86f5b1283ae18"
+            ],
+            "index": "pypi",
+            "version": "==1.10.1"
+        },
         "dynaconf": {
             "hashes": [
                 "sha256:808adfe964f10695846dbf8dad7632e47fc3bc38860fd1887ed57dddffc4eff2",
@@ -62,6 +85,13 @@
             ],
             "index": "pypi",
             "version": "==20.0.4"
+        },
+        "jmespath": {
+            "hashes": [
+                "sha256:b85d0567b8666149a93172712e68920734333c0ce7e89b78b3e987f71e5ed4f9",
+                "sha256:cdf6525904cc597730141d61b36f2e4b8ecc257c420fa2f4549bac2c2d0cb72f"
+            ],
+            "version": "==0.10.0"
         },
         "pillow": {
             "hashes": [
@@ -137,6 +167,13 @@
             "index": "pypi",
             "version": "==2.8.6"
         },
+        "python-dateutil": {
+            "hashes": [
+                "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c",
+                "sha256:75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"
+            ],
+            "version": "==2.8.1"
+        },
         "python-dotenv": {
             "hashes": [
                 "sha256:8c10c99a1b25d9a68058a1ad6f90381a62ba68230ca93966882a4dbc3bc9c33d",
@@ -189,12 +226,34 @@
             "markers": "platform_python_implementation == 'CPython' and python_version < '3.9'",
             "version": "==0.2.2"
         },
+        "s3transfer": {
+            "hashes": [
+                "sha256:2482b4259524933a022d59da830f51bd746db62f047d6eb213f2f8855dcb8a13",
+                "sha256:921a37e2aefc64145e7b73d50c71bb4f26f46e4c9f414dc648c6245ff92cf7db"
+            ],
+            "version": "==0.3.3"
+        },
+        "six": {
+            "hashes": [
+                "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259",
+                "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
+            ],
+            "version": "==1.15.0"
+        },
         "sqlparse": {
             "hashes": [
                 "sha256:017cde379adbd6a1f15a61873f43e8274179378e95ef3fede90b5aa64d304ed0",
                 "sha256:0f91fd2e829c44362cbcfab3e9ae12e22badaa8a29ad5ff599f9ec109f0454e8"
             ],
             "version": "==0.4.1"
+        },
+        "urllib3": {
+            "hashes": [
+                "sha256:8d7eaa5a82a1cac232164990f04874c594c9453ec55eef02eab885aa02fc17a2",
+                "sha256:f5321fbe4bf3fefa0efd0bfe7fb14e90909eb62a48ccda331726b4319897dd5e"
+            ],
+            "markers": "python_version != '3.4'",
+            "version": "==1.25.11"
         },
         "whitenoise": {
             "hashes": [
