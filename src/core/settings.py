@@ -175,7 +175,7 @@ STATICFILES_STORAGE = 'core.storage_backends.StaticStorage'
 # STATICFILES_STORAGE = StaticStorage
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-MEDIA_URL = _settings.MEDIA_URL
+MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, 'media')
 # MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIA_ROOT = '/media/'
