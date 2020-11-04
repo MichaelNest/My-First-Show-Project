@@ -9,7 +9,7 @@ from .forms import CommentForm
 class ArticleListView(ListView):
     model = Article
     template_name = 'articles/article_list.html'
-    paginate_by = 3
+    paginate_by = 6
     # login_url = 'login'
 
 # class ArticleMyListView(ListView):

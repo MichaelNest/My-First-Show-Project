@@ -9,24 +9,30 @@
 {% block content %}
 <div class="container">
     <div class="container text-center">
-        <p> <h1>Список статей:</h1> </p>
+        <p> <h1>Все статьи:</h1> </p>
     </div>
 
 {% include 'includes/pagination.html' with page=page_obj %}
 
 <!--        <div class="post-entry">-->
-            <div class="container-fluid">
-                <div class="card-deck">
+<!--            <div class="container-fluid">-->
+<!--                <div class="card-deck">-->
+    <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+
                     {% for article in object_list %}
 <!--                    <div class="col-12 col-sm-4">-->
-                        <div class="card border-info mb-3 my-2 mx-2" >
+          <div class="col-md-4 d-flex align-items-stretch">
+                        <div class="card mb-3 border-info my-2 mx-2" >
                         <div class="card-body">
                         <h2><a href="{% url 'articles:article_detail' article.pk %}">{{ article.title }}</a></h2>
 <!--                        <p>{{ article.body|truncatewords:22|safe }}...</p>-->
                         <p>Author: {{ article.author }} | {{ article.create_date|date:'d-m-Y' }}</p>
 <!--                        <a href="{% url 'articles:article_detail' article.pk %}" class="btn btn-primary my-3">Перейти</a>-->
                         {% if article.image %}
-                        <a href="{% url 'articles:article_detail' article.pk %}"><img src="{{ article.image.url }}" style="max-width:300px; max-height:300px;" class="img-thumbnail "></a>
+                        <a href="{% url 'articles:article_detail' article.pk %}"><img src="{{ article.image.url }}" style="max-width:100%; max-height:225px;" class="img-thumbnail"></a>
+
                             <!--style="max-width:300px; max-height:300px;" class="card-img-bottom" alt=""-->
                         {% endif %}
                     </div>
@@ -35,14 +41,14 @@
                             </div>
                 </div>
 <!--            </div>-->
-
 <!--        </div>-->
-
+</div>
                     {% endfor %}
-
+<!--        </div>-->
+<!--    </div>-->
         </div>
-
-    </div>
+        </div>
+        </div>
 
     
     {% include 'includes/pagination.html' with page=page_obj %}
