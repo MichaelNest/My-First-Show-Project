@@ -1,7 +1,7 @@
  {% load static %}
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" >
-        <a class="navbar-brand " href="{% url 'pages:home' %}"><img src="{% static 'img/logo_site_2_thumb.png' %}" style="max-width:50px; max-height:50px;" alt="">           My Application</a>
+        <a class="navbar-brand " href="{% url 'pages:home' %}"><img src="{% static 'img/logo_site_2_thumb.png' %}" style="max-width:50px; max-height:50px;" alt="">           My Site Project</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -14,6 +14,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'articles:article_list' %}">Статьи</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Парсер</a>
                 </li>
 <!--                <li class="nav-item">-->
 <!--                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Работа</a>-->

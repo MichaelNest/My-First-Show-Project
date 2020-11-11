@@ -13,10 +13,12 @@
     <div class="container">
 <!--      <h1>Album example</h1>-->
 <!--        <hr class="my-4">-->
-        <h1 class="display-4">My Application</h1>
-      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-      <p class="lead text-muted">My Application built with Django. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <h1 class="display-4">Welcome to the Site Project</h1>
+      <p class="lead text-muted">Добро пожаловать на этот проект сайта. Данный сайт сделан с целью изучения возможностей фреймворка Django и других сопутствующих программ, технологий и фреймворков.</p>
+      <p class="lead text-muted">На данный момент на сайте работает раздел "Статьи". После регистрации и авторизации сюда можно добавлять, изменять и удалять свои статьи. Так же для авторизованых пользователей есть возможность оставлять комментарии к статьям раздела.
       </p>
+        <p class="lead text-muted">В дальнейшем на сайт будут добавляться и другие разделы и новый функционал. На очереди - Парсер сайтов с вакансиями, где можно будет произвести поиск выбраных по параметрам вакансий на четырех самых больших порталах с вакансиями.
+        <p>
         <hr class="my-4">
         <!--      <p>-->
 <!--        <a href="#" class="btn btn-primary my-2">Main call to action</a>-->
@@ -38,8 +40,8 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+        <h5 class="card-title">Статьи</h5>
+        <p class="card-text">Раздел, где можно читать, розмещать и комментировать различные статьи.
         <a href="{% url 'articles:article_list' %}">Перейти...</a>
         </p>
 <!--        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
@@ -79,8 +81,8 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+        <h5 class="card-title">Поиск работы (в разработке)</h5>
+        <p class="card-text">Парсинг четырех сайтов с вакансиями по нужным параметрам.
             <a href="#">Перейти...</a>
         </p>
 <!--        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->

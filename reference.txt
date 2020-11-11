@@ -152,3 +152,50 @@ create config/settings.yaml and config/.secrets.yaml; add fields to config/setti
 110) Create file core/storage_backends.py
 111) Create DEFAULT_FILE_STORAGE = 'core.storage_backends.MediaStorage' in settings.py
 112) python manage.py collectstatic --- copy static/media files to S3 bucket
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+
+DATABASES:
+1) sudo apt update | sudo apt install postgresql postgresql-contrib ---install postgresql to local host (my comp)
+--- по умолчанию будет создан пользователь с правами (ролью) администратора с именем "postgres"
+2) psql --version ---watch version postgresql
+3) sudo -i -u postgres | psql ---переходим в учетную запись админ-пользователя,
+которого создад postgresql при установке | и оттуда переходим в консоль psql
+4) sudo -u postgres psql ---другой вариант входа от имени учетной записи postgres
+5) sudo -i -u postgres | createdb base_name ---создание новой бд
+6) sudo -i -u postgres | dropdb base_name ---удаление бд
+7) psql base_name ---перейти в выбранную базу данных
+8) \q ---выход наверх; \l ---посмотреть список баз данных;
+    \d, \d db_name и \dt ---посмотреть содержание базы данных
+9) psql | \du ---посмотреть полномочия пользователя (учетной записи)
+10) exit или ctrl-d ---выход
+11) CREATE table tab_one(); ---создание таблици с именем tab_one
+    ---CREATE table users(age int, login char(10), email varchar(10));
+12) DROP table tab_one; ---удаление таблици с именем tab_one
+13) \d table_name ---посмотреть содержимое таблицы
+14) INSERT INTO table_name(age, login, email)
+    VALUES(22, 'vasia', 'vas@gmail.com'),(33, 'petia', 'pet@gmail.com'),(11, 'lusia', 'lus@gmail.com'); ---заполнение таблицы
+15) SELECT*FROM table_name; ---посмотреть содержимое таблици
+    SELECT attribut_name FROM table_name;
+16) ALTER TABLE table_name_old RENAME TO table_name_new; ---переименование таблицы
+17) ALTER TABLE table_name ADD attribut_name type_data; ---добавление колонок
+18) ALTER TABLE table_name DROP COLUMN attribut_name; ---удаление колонок
+19) ALTER TABLE table_name RENAME COLUMN attribut_name TO new_attribut_name; ---переименовать колонку
+20) ALTER TABLE table_name ALTER COLUMN attribut_name TYPE new_type; ---измененин типа данных колонки
+21) SELECT*FROM users WHERE age<20; ---посмотреть содержимое таблицы по кретерию age<20
+22) Тип данных numeric(precision, scale) ---precision-точность(общее количество цифр), scale-масштаб(количество цифр после запятой)
+23) Значение 'NaN' --- Not-a-Number (не число). Записывается в апострофах: UPDATE table SET x='NaN'
+24) SELECT SUM(weight) FROM people ---выдаст суммн всех значений столбца weight для таблици people
+25) DELETE FROM table_name WHERE table_column = 'aaa'; ---удаление записи по значению столбца из таблицы
+        DELETE FROM people WHERE firstname = 'aaa';
+26) DELETE FROM table_name; ---удалить все записи с таблицы
+27) UPDATE table_name SET attribut_name_1=value_1, attribute_name_2=value_2,...; ---заменить значение атрибута для всех записей таблицы
+        UPDATE two SET comment='bla-bla-bla';
+28) UPDATE table_name SET attribut_name=change_value WHERE atribute_name=idintificate_value; ---заменить значение у конкретной записи
+        UPDATE two SET comment='bla-bla-bla' WHERE name='vasia';
+29) SERIAL ---последовательный числовой тип данных для создания столбцав с уникальными идентификаторами
+30) NULL, NOT NULL, DEFAULT
+        CREATE TABLE foo(id serial, name varchar(100), age int default 18); ---создастся таблица, где age уже по умолчанию будет 18
+31)
+
