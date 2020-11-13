@@ -218,3 +218,15 @@ DATABASES:
         CREATE TABLE five(name varchar(100), age int, weight int, PRIMARY_KEY(age, weight)); ---составной первичный ключ из двух столбцов
 36) ALTER TABLE table_name DROP CONSTRAINT name_primary_key ---удаление первичного ключа по имени
 
+37) ALTER TABLE one ALTER COLUMN name SET NOT NULL; ---устанавливаем условие NOT NULL для какого либо столбца (name)
+38) ALTER TABLE one ALTER COLUMN name DROP NOT NULL; ---отменяем условие NOT NULL для столбца - будет установлено NULL (исходное)
+49) ALTER TABLE two DROP CONSTRAINT constraint_name; ---удаляем ограничение из таблицы
+50) ALTER TABLE three ADD UNIQUE (attribut_name); ---добавляем уникальность для какого либо аттрибута (столбца)
+51) ALTER TABLE three ADD CONSTRAINT constraint_name UNIQUE (attribute_name); ---добавляем уникальность с именем
+52) ALTER TABLE three ADD CHECK (age>0 AND age<100); ---добавляем условие проверки
+53) ALTER TABLE three ADD CONSTRAINT constraint_name CHECK (age>0 AND age<100); ---добавляеь условие для проверки с именем
+54) ALTER TABLE three ADD PRIMARY KEY (id); --- устанавлеваем параметр Первичного Ключа для аттрибута id
+55) ALTER TABLE three ADD CONSTRAINT constraint_name PRIMARY KEY (id); ---устанавлеваем параметр Первичного Ключа с именем для аттрибута id
+
+56) 
+
