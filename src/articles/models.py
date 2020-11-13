@@ -16,6 +16,9 @@ class Article(models.Model):
     def get_absolute_url(self):
         return reverse('articles:article_detail', args=[str(self.id)])
 
+    class Meta:
+        ordering = ('-create_date',)
+
 class Comment(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='comments')
     comment = models.TextField()

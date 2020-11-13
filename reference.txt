@@ -197,5 +197,24 @@ DATABASES:
 29) SERIAL ---последовательный числовой тип данных для создания столбцав с уникальными идентификаторами
 30) NULL, NOT NULL, DEFAULT
         CREATE TABLE foo(id serial, name varchar(100), age int default 18); ---создастся таблица, где age уже по умолчанию будет 18
-31)
+
+31) CHECK ---параметр условий\ограничений
+        CREATE TABLE one(name varchar(100), age int CHECK (age>0 and age<100)); ---ограничение на уровне атрибута
+        CREATE TABLE three(name varchar(100), age int, CHECK (age>0 and age<100)); ---ограничение на уровне атрибута
+        CREATE TABLE five(name varchar(100), age int, weight int, CHECK ((age>0) and (weight>0))); ---ограничение на уровне группы
+        CREATE TABLE six(name varchar(100), age int, weight int, CHECK (age > weight)); ---ограничение на уровне группы
+        CREATE TABLE seven(name varchar(100), age int, weight int, CONSTRAINT name_of_my_constraint CHECK (age > weight)); ---оператором CONSTRAINT задается имя проверки CHECK
+32) ALTER TABLE table_name DROP CONSTRAINT name_constraint ---удаление ограничения по имени
+
+33) UNIQUE ---параметр уникальности
+        CREATE TABLE one(name varchar(100) UNIQUE, age int, weight int); ---уникальность на уровне столбца\аттрибута
+        CREATE TABLE one(name varchar(100), age int, weight int, UNIQUE(name)); ---уникальность на уровне таблицы
+        CREATE TABLE one(name varchar(100), age int, weight int, psevdo varchar(100), UNIQUE (name, psevdo)); ---уникальность на уровне таблицы
+34) ALTER TABLE table_name DROP CONSTRAINT name_unique ---удаление уникальности по имени
+
+35) PRIMARY_KEY ---параметр уникального и отличного от NULL идентификатора столбца или группы столбцов
+        CREATE TABLE five(name varchar(100) PRIMARY_KEY, age int, weight int); ---столбец задается, как Первичный Ключ
+        CREATE TABLE five(name varchar(100), age int, weight int, PRIMARY_KEY(name)); ---первичный ключ задается на уровне таблицы
+        CREATE TABLE five(name varchar(100), age int, weight int, PRIMARY_KEY(age, weight)); ---составной первичный ключ из двух столбцов
+36) ALTER TABLE table_name DROP CONSTRAINT name_primary_key ---удаление первичного ключа по имени
 
